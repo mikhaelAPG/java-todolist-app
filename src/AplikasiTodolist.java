@@ -148,6 +148,16 @@ public class AplikasiTodolist {
         }
     }
 
+    public static void testViewTodoList(){
+        addTodoList("Satu");
+        addTodoList("Dua");
+        addTodoList("Tiga");
+        addTodoList("Empat");
+        addTodoList("Lima");
+        viewShowTodoList();
+    }
+
+
     /**
      * Menampilkan view menambahkan todo list
      */
