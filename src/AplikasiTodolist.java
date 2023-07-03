@@ -5,13 +5,14 @@ public class AplikasiTodolist {
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) {
-
+        viewShowTodoList();
     }
 
     /**
      * Menampilkan todo list
      */
     public  static void showTodoList(){
+        System.out.println("TODOLIST");
         for (var i = 0; i < model.length; i++){
             var todo  = model[i];
             var no = i + 1;
@@ -27,7 +28,6 @@ public class AplikasiTodolist {
         model[1] = "Studi Kasus Java Basic : Aplikasi Todolist";
         showTodoList();
     }
-
 
     /**
      * Menambah todo list
@@ -72,7 +72,7 @@ public class AplikasiTodolist {
     /**
      * Menghapus todo dari list
      */
-    public static boolean removeTodoList(Integer number) {
+    public static boolean removeTodoList(Integer number){
         if((number - 1) >= model.length){ // jika lebih dari panjang arraynya
             return false;
         }else if (model[number - 1] == null){ // jika sebelumnya tidak ada datanya
@@ -132,7 +132,7 @@ public class AplikasiTodolist {
             System.out.println("MENU : ");
             System.out.println("1. Tambah");
             System.out.println("2. Hapus");
-            System.out.println("3. Keluar");
+            System.out.println("3. Keluar(x)");
 
             var input = input("Pilih");
 
@@ -156,7 +156,6 @@ public class AplikasiTodolist {
         addTodoList("Lima");
         viewShowTodoList();
     }
-
 
     /**
      * Menampilkan view menambahkan todo list
@@ -185,7 +184,7 @@ public class AplikasiTodolist {
     /**
      * Menampilkan view menghapus todo list
      */
-    public static void viewRemoveTodoList() {
+    public static void viewRemoveTodoList(){
         System.out.println("MENGHAPUS TODOLIST");
 
         var number = input("Nomor yang Dihapus (x Jika Batal)");
