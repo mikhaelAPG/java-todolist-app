@@ -20,6 +20,13 @@ public class AplikasiTodolist {
         }
     }
 
+    public static void testShowTodoList(){
+        model[0] = "Belajar Java Dasar";
+        model[1] = "Studi Kasus Java Basic : Aplikasi Todolist";
+        showTodoList();
+    }
+
+
     /**
      * Menambah todo list
      */
