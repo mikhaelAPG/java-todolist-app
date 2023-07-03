@@ -1,7 +1,7 @@
 package entity;
 
 public class TodoList {
-
+    // create entity
     private String todo;
 
     public TodoList() {
