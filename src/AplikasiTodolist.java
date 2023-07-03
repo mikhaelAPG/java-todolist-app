@@ -26,4 +26,25 @@ public class AplikasiTodolist {
     public static boolean removeTodoList(Integer number) {
         return true;
     }
+
+    /**
+     * Menampilkan view todo list
+     */
+    public static void viewShowTodoList(){
+
+    }
+
+    /**
+     * Menampilkan view menambahkan todo list
+     */
+    public static void viewAddTodoList(){
+
+    }
+
+    /**
+     * Menampilkan view menghapus todo list
+     */
+    public static void viewRemoveTodoList() {
+
+    }
 }
