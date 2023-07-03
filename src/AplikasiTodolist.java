@@ -59,6 +59,14 @@ public class AplikasiTodolist {
         }
     }
 
+    public static void testAddTodoList(){
+        for (int i = 0; i < 25; i++ ){
+            addTodoList("Contoh Todo Ke." + i);
+
+            showTodoList();
+        }
+    }
+
     /**
      * Menghapus todo dari list
      */
