@@ -71,14 +71,39 @@ public class AplikasiTodolist {
      * Menghapus todo dari list
      */
     public static boolean removeTodoList(Integer number) {
-        if ((number - 1) >= model.length) {
+        if((number - 1) >= model.length){ // jika lebih dari panjang arraynya
             return false;
-        } else if (model[number - 1] == null) {
+        }else if (model[number - 1] == null){ // jika sebelumnya tidak ada datanya
             return false;
-        } else {
-            model[number - 1] = null;
+        }else{
+            for (int i = (number - 1); i < model.length; i++){
+                if (i == (model.length - 1)) { // jika sudah ada di ujung data modelnya
+                    model[i] = null;
+                } else { // jika bukan data yang ujing kita geser
+                    model[i] = model[i + 1];
+                }
+            }
             return true;
         }
+    }
+
+    public static void testRemoveTodoList(){
+        addTodoList("Satu");
+        addTodoList("Dua");
+        addTodoList("Tiga");
+        addTodoList("Empat");
+        addTodoList("Lima");
+
+        var result = removeTodoList(20);
+        System.out.println(result);
+
+        result = removeTodoList(7);
+        System.out.println(result);
+
+        result = removeTodoList(2);
+        System.out.println(result);
+
+        showTodoList();
     }
 
     /**
