@@ -199,4 +199,16 @@ public class AplikasiTodolist {
             }
         }
     }
+
+    public static void testViewRemoveTodoList(){
+        addTodoList("Satu");
+        addTodoList("Dua");
+        addTodoList("Tiga");
+
+        showTodoList();
+
+        viewRemoveTodoList();
+
+        showTodoList();
+    }
 }
