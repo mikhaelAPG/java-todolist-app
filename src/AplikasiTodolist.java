@@ -173,6 +173,15 @@ public class AplikasiTodolist {
         }
     }
 
+    public static void testViewAddTodoList(){
+        addTodoList("Satu");
+        addTodoList("Dua");
+
+        viewAddTodoList();
+
+        showTodoList();
+    }
+
     /**
      * Menampilkan view menghapus todo list
      */
